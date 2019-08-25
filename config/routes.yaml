@@ -1,0 +1,16 @@
+index:
+   path: /inicio
+   controller: App\Controller\HomeController::index
+
+personas:
+   path: /personas/{nombre}/{apellidos}
+   controller: App\Controller\HomeController::personas
+   defaults: { nombre: 'codexmaker', apellidos: 'seo'}
+   methods: [POST,GET]
+   requirements:
+    nombre: '[a-zA-Z]+'
+    apellidos: '[a-zA-Z]+'
+
+redirigir:
+   path: /redirigir
+   controller: App\Controller\HomeController::redirigir

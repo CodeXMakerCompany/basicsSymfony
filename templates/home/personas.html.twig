@@ -1,0 +1,62 @@
+{% extends 'layouts/master.html.twig' %}
+
+{% block titulo %} Personas {% endblock %}
+
+{% block header %}
+	<h2>{{title}}</h2>
+{% endblock %}
+
+{% block contenido %}
+    {#
+    	<h1>{{ title }}</h1>
+    	<h2>Tu nombre es: {{ nombre }}</h2>
+    	<h3>Tus apellidos son: {{ apellidos }}</h3>
+    #}
+
+    {# CREAR VARIABLES TWIG#}
+	{% set nick = 'Codexmaker' %}
+	<h4>{{nick}}</h4>
+	
+	{#Trabajar con arrays#}
+
+	{{ dump(personas) }}
+	Impresion de array: {{ personas[0] }}
+	<hr>
+
+	{#Trabajar con arrays asociativo#}
+	{{ dump(documento) }}
+	Impresion de array asociativo indice nombre espacio 0: {{ documento.nombre }}
+	
+	{#Condicional#}
+	{% if documento.nombre == 'primerDocumento' %}
+		<h1>Se ha cargado el documento exitosamente</h1>
+	{% else %}	
+		<h2>No hay documentos que cargar</h2>
+	{% endif %}
+
+	{#Bucle#}
+	{% if documento|length >= 0 %}
+	<h3>Recorrido de arrarys exitoso</h3>
+		<ul>
+			{% for doc in documento %}
+			    <li>
+			    	{{doc}}
+			    </li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{#Starts#}
+	{% if documento.nombre starts with 'p' %}
+		<h4>El nombre comienza por P</h4>
+	{% endif %}
+
+	{#Ends#}
+	{% if documento.nombre ends with 'o' %}
+		<h4>El nombre comienza por O</h4>
+	{% endif %}
+	
+	<hr>
+		{{ include('partials/funciones.html.twig') }}
+	<hr>	
+{% endblock %}

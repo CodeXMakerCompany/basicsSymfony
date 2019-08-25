@@ -1,0 +1,19 @@
+<h3>Funciones</h3>
+	<h4>Funcion predefinida</h4>
+	{#Funcion predefinida#}
+	Valor minimo: {{ min([1,34,4,56,3,6,7,234,0])}} <br>
+	Valor maximo: {{ max([1,34,4,56,3,6,7,234,0])}} <br>
+	{{ random(documento) }} <br>
+	
+	{% for i in range(0, 100, 5) %}
+	    {{i}} 
+	{% endfor %}
+<h3>Filtros</h3>
+	{{ documento|length }}
+
+	{% set direccion = '    http://localhost/basicsSymfony/public/docs     ' %}
+	{{ dump(direccion|trim) }}
+
+	<h1>Extensiones personalizadas</h1>
+
+	{{ multiplicar(2)|raw }}	

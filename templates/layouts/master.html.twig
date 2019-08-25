@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+        	{% block titulo %} Inicio {% endblock %}-Basics Symfony-
+        </title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    	<div id="header">
+    		{% block header %}
+				<h1>Cabecera de la plantilla</h1>
+    		{% endblock %}
+    	</div>
+		<hr>
+    	<section id="content">
+    		{% block contenido %}
+    			<p>Contenido por defecto</p>
+    		{% endblock %}
+    	</section>
+		<hr>
+    	<footer>
+			codexmaker dev
+    	</footer>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
