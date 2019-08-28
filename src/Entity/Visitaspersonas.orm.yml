@@ -1,0 +1,36 @@
+App\Entity\Visitaspersonas:
+    type: entity
+    table: visitaspersonas
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        ip:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        pais:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        visitas:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

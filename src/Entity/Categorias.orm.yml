@@ -1,0 +1,64 @@
+App\Entity\Categorias:
+    type: entity
+    table: categorias
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoria:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        ruta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        estado:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        oferta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        preciooferta:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: precioOferta
+        descuentooferta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: descuentoOferta
+        imgoferta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: imgOferta
+        finoferta:
+            type: datetime
+            nullable: false
+            column: finOferta
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

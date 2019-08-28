@@ -1,0 +1,87 @@
+App\Entity\Compras:
+    type: entity
+    table: compras
+    indexes:
+        pago:
+            columns:
+                - pago
+        id_usuario:
+            columns:
+                - id_usuario
+        envio:
+            columns:
+                - envio
+        id_producto:
+            columns:
+                - id_producto
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        envio:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        metodo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        email:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        direccion:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        pais:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        pago:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    manyToOne:
+        idUsuario:
+            targetEntity: Usuarios
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_usuario:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idProducto:
+            targetEntity: Productos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_producto:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

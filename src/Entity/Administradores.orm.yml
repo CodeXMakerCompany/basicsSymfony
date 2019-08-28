@@ -1,0 +1,54 @@
+App\Entity\Administradores:
+    type: entity
+    table: administradores
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        email:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        foto:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        password:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        perfil:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        estado:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

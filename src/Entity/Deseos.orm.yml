@@ -1,0 +1,38 @@
+App\Entity\Deseos:
+    type: entity
+    table: deseos
+    indexes:
+        id_usuario:
+            columns:
+                - id_usuario
+        id_producto:
+            columns:
+                - id_producto
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idUsuario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_usuario
+        idProducto:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_producto
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

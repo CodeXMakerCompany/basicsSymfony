@@ -1,0 +1,50 @@
+App\Entity\Cabeceras:
+    type: entity
+    table: cabeceras
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        ruta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        titulo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        descripcion:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        palabrasclaves:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: palabrasClaves
+        portada:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

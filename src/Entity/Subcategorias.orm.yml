@@ -1,0 +1,76 @@
+App\Entity\Subcategorias:
+    type: entity
+    table: subcategorias
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        subcategoria:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        idCategoria:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_categoria
+        ruta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        estado:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        ofertadoporcategoria:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ofertadoPorCategoria
+        oferta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        preciooferta:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: precioOferta
+        descuentooferta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: descuentoOferta
+        imgoferta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: imgOferta
+        finoferta:
+            type: datetime
+            nullable: false
+            column: finOferta
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

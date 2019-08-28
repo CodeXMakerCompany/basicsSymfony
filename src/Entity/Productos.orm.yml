@@ -1,0 +1,177 @@
+App\Entity\Productos:
+    type: entity
+    table: productos
+    indexes:
+        id_categoria:
+            columns:
+                - id_categoria
+        id_subcategoria:
+            columns:
+                - id_subcategoria
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        tipo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        ruta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        estado:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        titulo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        titular:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        descripcion:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        multimedia:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        detalles:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        precio:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        portada:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        vistas:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        ventas:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        vistasgratis:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: vistasGratis
+        ventasgratis:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ventasGratis
+        ofertadoporcategoria:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ofertadoPorCategoria
+        ofertadoporsubcategoria:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ofertadoPorSubCategoria
+        oferta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        preciooferta:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: precioOferta
+        descuentooferta:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: descuentoOferta
+        imgoferta:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: imgOferta
+        finoferta:
+            type: datetime
+            nullable: false
+            column: finOferta
+        peso:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        entrega:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    manyToOne:
+        idCategoria:
+            targetEntity: Categorias
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_categoria:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSubcategoria:
+            targetEntity: Subcategorias
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_subcategoria:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

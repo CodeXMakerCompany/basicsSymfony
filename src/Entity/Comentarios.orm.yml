@@ -1,0 +1,54 @@
+App\Entity\Comentarios:
+    type: entity
+    table: comentarios
+    indexes:
+        id_usuario:
+            columns:
+                - id_usuario
+        id_producto:
+            columns:
+                - id_producto
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idUsuario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_usuario
+        calificacion:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        comentario:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    manyToOne:
+        idProducto:
+            targetEntity: Productos
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_producto:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

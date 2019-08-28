@@ -14,3 +14,19 @@ personas:
 redirigir:
    path: /redirigir
    controller: App\Controller\HomeController::redirigir
+
+users:
+   path: /users/index
+   controller: App\Controller\UsersController::index 
+users_save:
+   path: /users/save
+   controller: App\Controller\UsersController::save
+users_detail:
+   path: /users/{id}
+   controller: App\Controller\UsersController::usuario
+users_update:
+   path: /users/update/{id}
+   controller: App\Controller\UsersController::update 
+users_delete :
+   path: /users/delete/{id}
+   controller: App\Controller\UsersController::delete             

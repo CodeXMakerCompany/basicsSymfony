@@ -1,0 +1,96 @@
+App\Entity\Comercio:
+    type: entity
+    table: comercio
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        impuesto:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        envionacional:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: envioNacional
+        enviointernacional:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: envioInternacional
+        tasaminimanal:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: tasaMinimaNal
+        tasaminimaint:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: tasaMinimaInt
+        pais:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        modopaypal:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: modoPaypal
+        clienteidpaypal:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: clienteIdPaypal
+        llavesecretapaypal:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: llaveSecretaPaypal
+        modopayu:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: modoPayu
+        merchantidpayu:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: merchantIdPayu
+        accountidpayu:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: accountIdPayu
+        apikeypayu:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: apiKeyPayu
+    lifecycleCallbacks: {  }

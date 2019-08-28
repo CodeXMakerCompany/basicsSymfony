@@ -1,0 +1,87 @@
+App\Entity\Plantilla:
+    type: entity
+    table: plantilla
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        barrasuperior:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: barraSuperior
+        textosuperior:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: textoSuperior
+        colorfondo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: colorFondo
+        colortexto:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: colorTexto
+        logo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        icono:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        redessociales:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: redesSociales
+        apifacebook:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: apiFacebook
+        pixelfacebook:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: pixelFacebook
+        googleanalytics:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: googleAnalytics
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

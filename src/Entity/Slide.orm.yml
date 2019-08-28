@@ -1,0 +1,95 @@
+App\Entity\Slide:
+    type: entity
+    table: slide
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        imgfondo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: imgFondo
+        tiposlide:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: tipoSlide
+        imgproducto:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: imgProducto
+        estiloimgproducto:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: estiloImgProducto
+        estilotextoslide:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: estiloTextoSlide
+        titulo1:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        titulo2:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        titulo3:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        boton:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        url:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        orden:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }

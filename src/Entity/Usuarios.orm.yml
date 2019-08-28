@@ -1,0 +1,61 @@
+App\Entity\Usuarios:
+    type: entity
+    table: usuarios
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        password:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        email:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        modo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        foto:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        verificacion:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        emailencriptado:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: emailEncriptado
+        fecha:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+    lifecycleCallbacks: {  }
